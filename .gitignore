@@ -1,0 +1,13 @@
+/node_modules
+
+*.sketch
+*.fig
+*.xd
+
+.DS_Store
+.prettierignore
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
