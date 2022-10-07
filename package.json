@@ -1,0 +1,40 @@
+{
+  "name": "fylo-dark-theme-landing-page",
+  "version": "1.0.0",
+  "description": "Frontend Mentor challenge",
+  "main": "dist/index.html",
+  "scripts": {
+    "build:sass": "sass  --no-source-map src/scss:dist/css",
+    "copy:images": "copyfiles -u 1 ./src/img/**/* dist",
+    "copy:html": "copyfiles -u 1 ./src/*.html dist",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:images": "onchange \"src/img/**/*\" -- npm run copy:html",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "watch:sass": "sass  --no-source-map --watch src/scss:dist/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server dist --files dist",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:* build:*",
+    "postbuild": "postcss dist/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.12",
+    "browser-sync": "^2.27.10",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.1.13",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.55.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iPavelGeorgiev/fylo-dark-theme-landing-page.git"
+  },
+  "author": "Pavel Georgiev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iPavelGeorgiev/fylo-dark-theme-landing-page/issues"
+  },
+  "homepage": "https://github.com/iPavelGeorgiev/fylo-dark-theme-landing-page#readme"
+}
