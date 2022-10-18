@@ -1,0 +1,63 @@
+@use "../abstracts/colors";
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+.intro {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: colors.$dark-blue-200;
+    z-index: -2;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    background:url("../img/bg-curvy-desktop.svg") no-repeat;
+    background-size: 100% 100%;
+    height: 449px;
+    width: 100%;
+    z-index: -1;
+
+    @include breakpoint("max", 480px) {
+      background:url("../img/bg-curvy-mobile.svg") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    text-align: center;
+    max-width: 74rem;
+    margin: 0 auto;
+    padding: vars.$container-padding-x;
+    padding-bottom: 16rem;
+  }
+
+  &-img {
+    max-width: 72rem;
+  }
+
+  &-title {
+    margin-bottom: 0;
+  }
+
+  &-text {
+    font-size: 2rem;
+    max-width: 60rem;
+
+    @include breakpoint("max", 480px) {
+      font-size: 1.8rem;
+    }
+  }
+}
