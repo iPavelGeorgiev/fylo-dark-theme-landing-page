@@ -1,0 +1,17 @@
+@use "../abstracts/colors";
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+:root {
+  font-size: vars.$font-size-root;
+}
+
+body {
+  font-family: vars.$font-family-base;
+  font-weight: vars.$font-weight-normal;
+  font-size: vars.$font-size-base-desktop;
+  line-height: vars.$line-height-base;
+  color: colors.$white;
+  background-color: colors.$dark-blue-300;
+  min-height: 100vh;
+}

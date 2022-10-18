@@ -1,0 +1,8 @@
+@use "../abstracts/breakpoints" as *;
+
+.logo {
+  display: block;
+  width: 17rem;
+  height: auto;
+  flex-shrink: 0;
+}

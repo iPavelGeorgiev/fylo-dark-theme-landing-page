@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+h1{
+  font-size: 4rem;
+  font-family: vars.$font-family-secondary;
+  margin-bottom: 3rem;
+
+  @include breakpoint("max", 480px) {
+    font-size: 2.8rem;
+  }
+}
+
+h2 {
+  font-size: 3.3rem;
+  font-family: vars.$font-family-secondary;
+  line-height: vars.$line-height-small;
+  margin-bottom: 2rem;
+
+  @include breakpoint("max", 480px) {
+    font-size: 2.4rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: vars.$font-family-secondary;
+  margin-bottom: 1rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
