@@ -1,0 +1,64 @@
+@use "../abstracts/colors";
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+.cta {
+  position: relative;
+  bottom: -11.5rem;
+  background-color: colors.$dark-blue-200;
+  border-radius: 1rem;
+  max-width: 86rem;
+  margin: 0 auto;
+  padding: 4rem;
+  text-align: center;
+
+  @include breakpoint("max", 930px) {
+    margin: vars.$container-padding-x;
+  }
+
+  &-text {
+    max-width: 63rem;
+    margin: 0 auto 3rem auto;
+  }
+
+  &-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 2.5rem;
+
+    @include breakpoint("max", 640px) {
+      flex-direction: column;
+    }
+  }
+
+  .error-msg {
+    visibility: hidden;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: start;
+    color: colors.$light-red;
+    margin: .5rem 0 0 4rem;
+  }
+  
+  &-input-group {
+    width: 62%;
+
+    @include breakpoint("max", 640px) {
+      width: 100%;
+    }
+  }
+
+  .btn-primary-sm {
+    @include breakpoint("max", 640px) {
+      width: 100%;
+    }
+  }
+
+  &-input {
+    padding: 0 3.8rem;
+    height: 5rem;
+    border-radius: 5rem;
+    width: 100%;
+  }
+}
