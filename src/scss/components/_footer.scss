@@ -1,0 +1,128 @@
+@use "../abstracts/colors";
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/variables" as vars;
+
+.footer {
+  background-color: colors.$dark-blue-400;
+  font-size: 1.6rem;
+  padding: 19rem 3rem 1rem 3rem;
+
+  &-content {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint("max", 480px) {
+      flex-direction: column;
+      gap: 6rem;
+    }
+  }
+
+  .logo {
+    margin-bottom: 4rem;
+
+    @media (min-width: 480px) and (max-width: 922px) {
+      margin: 0 auto 4rem auto;
+    }
+  }
+
+  .location {
+    max-width: 31%;
+    display: flex;
+    align-items: flex-start;
+    gap: 2.8rem;
+
+    &-icon {
+      margin-top: .8rem;
+      width: 3.5rem;
+    }
+
+    @include breakpoint("max", 480px) {
+      max-width: 100%;
+    }
+  }
+
+  .contacts {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-group {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+    }
+
+    &-icon {
+      width: 1.8rem;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 8rem;
+
+    @include breakpoint("max", 480px) {
+      flex-direction: column;
+      gap: 6rem;
+    }
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    &-link {
+      color: hsl(210, 19%, 86%);
+      transition: vars.$transition-base;
+    }
+
+    &-link:hover {
+      color: colors.$white;
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 1.3rem;
+
+    i {
+      text-align: center;
+      font-size: 1.4rem;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      padding: .75rem;
+      border: 1px solid colors.$white;
+      transition: vars.$transition-base;
+
+      &:hover {
+        color: colors.$cyan;
+        border: 1px solid colors.$cyan;
+      }
+    }
+  }
+
+  .attribution {
+    text-align: center;
+    padding: 1rem 0;
+
+    a {
+      color: colors.$blue;
+      transition: vars.$transition-base;
+
+      &:hover {
+        color: colors.$cyan;
+      }
+    }
+  }
+}
