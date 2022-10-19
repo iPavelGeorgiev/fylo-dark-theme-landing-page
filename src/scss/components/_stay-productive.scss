@@ -1,0 +1,66 @@
+@use "../abstracts/colors";
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+.stay-productive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 5.7rem;
+  margin-bottom: 18rem;
+  padding: vars.$container-padding-x;
+  
+  @include breakpoint("max", 930px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &-img-container {
+    max-width: 61.5rem;
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 56rem;
+    margin-top: 5rem;
+
+    @include breakpoint("max", 930px) {
+      flex-basis: 23rem;
+    }
+  }
+
+  &-title {
+    max-width: 35rem;
+    margin-bottom: 0;
+  }
+
+  &-link {
+    align-self: flex-start;
+    color: colors.$cyan;
+    border-bottom: 1px solid colors.$cyan;
+    padding-bottom: .2rem;
+    cursor: pointer;
+    transition: vars.$transition-base;
+
+    &:hover {
+      color: colors.$white;
+      border-bottom: 1px solid colors.$white;
+    }
+
+    i {
+      vertical-align: middle;
+      font-size: 1.2rem;
+      height: auto;
+      margin-left: .3rem;
+    }
+  }
+}
