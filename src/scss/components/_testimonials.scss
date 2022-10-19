@@ -1,0 +1,56 @@
+@use "../abstracts/colors";
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 122rem;
+  margin: 0 auto 8rem auto;
+  padding: vars.$container-padding-x;
+}
+
+.testimonial {
+  background-color: colors.$dark-blue-100;
+  border-radius: .5rem;
+  padding: 2.8rem;
+  flex-basis: 36rem;
+
+  &-comment {
+    margin-bottom: 2rem;
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-photo {
+      width: 2.7rem;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    &-name {
+      font-size: 1.2rem;
+    }
+
+    &-status {
+      font-size: .9rem;
+    }
+  }
+}
+
+.testimonial:nth-child(1) {
+  position: relative;
+
+  &::before {
+    content: url("../img/bg-quotes.png");
+    position: absolute;
+    top: -3.5rem;
+    left: -1rem;
+    z-index: -1;
+  }
+}
