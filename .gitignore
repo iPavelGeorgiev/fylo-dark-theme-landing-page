@@ -1,6 +1,8 @@
 /node_modules
 /dist
 
+style-guide.md
+
 *.sketch
 *.fig
 *.xd
