@@ -1,0 +1,1 @@
+"use strict";const ctaInput=document.querySelector(".cta-input"),ctaBtn=document.querySelector(".btn-primary-sm"),errorMsg=document.querySelector(".error-msg");function validateEmail(t){return!!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(t)}ctaBtn.addEventListener("click",()=>{var t=validateEmail(ctaInput.value);errorMsg.style.visibility=t?"hidden":"visible"});
