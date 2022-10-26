@@ -47,8 +47,8 @@ I don't have access to the premium Figma/Sketch files, so the design is not pixe
 
 ### Links
 
-- [Live Site URL](https://pavel-frontend-mentor.github.io/huddle-landing-page-with-curved-sections)
-- [Solution URL](https://www.frontendmentor.io/solutions/huddle-landing-page-with-curved-sections-Es6A-XnWH)
+- [Live Site URL](https://ipavelgeorgiev.github.io/fylo-dark-theme-landing-page/)
+- [Solution URL](https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-uUHB6BGqKi)
 
 
 ## Run locally
